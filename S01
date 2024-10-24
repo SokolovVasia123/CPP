@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(0,"Russian");
+    int a;
+    double b;
+    char c;
+    bool d;
+    cout << "Введите целое число" << endl;
+    cin >> a;
+    cout << "Введите число c плавающей запятой" << endl;
+    cin >> b;
+    cout << "Введите любую букву" << endl;
+    cin >> c;
+    cout << "Введите 0 или 1" << endl;
+    cin >> d;
+    cout << c+c+c << endl;
+    cout << a/b << endl;
+    cout << a-b << endl;
+    cout << a*a << endl;
+    return 0;
+}
