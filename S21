@@ -1,0 +1,27 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+setlocale(0, "Rus");
+cout << "Получить от пользователя два числа А, В (В>A). Пройти циклом от А до В, вывести значение каждого числа умноженного на 3 в файл «output»";
+cout << '\n';
+int A,B,C;
+cout << "Введите число А: ";
+cin >> A;
+cout << "Введите число B: ";
+cin >> B;
+if (B <= A) {
+    cout << "Условие не выполнено";
+}
+else cout << B << ">" << A;
+ofstream file_to_write;
+file_to_write.open("output.txt");
+for (C=A; C<= B; C++)
+{
+    file_to_write << C * 3  << endl;
+}
+file_to_write.close();
+return 0;
+}
