@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(0, "Rus");
+    cout << "Покажите работу операторов деления нацело и определения остатка от деления" << endl;
+    int a, b;
+    cout << "Введите 2 числа:" << endl;
+    cin >> a;
+    cin >> b;
+    cout << "Частное от деления:" << a/b << endl;
+     cout << "Остаток от деления:" << a%b << endl;
+    return 0;
+}
