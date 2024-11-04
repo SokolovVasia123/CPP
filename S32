@@ -1,0 +1,24 @@
+#include <iostream>
+#include <Windows.h>
+#include <cstring>
+using namespace std;
+void revers (char ch[])
+{
+int num = strlen(ch);
+for (int i = num; i != -1; --i)
+{
+cout << ch[i];
+}
+}
+int main()
+{
+setlocale (0, "Russian");
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+cout << "Пользователь вводит строку. Используя указатель на строку, сдвиньте каждую букву в строке на 1 (каждый символ задается числом) длину строки можно получить функцией из библиотеки." << endl;
+char ch[1];
+cout << "Введите строку: ";
+cin >> ch;
+revers(ch);
+return 0;
+}
