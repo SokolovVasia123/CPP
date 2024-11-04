@@ -8,7 +8,7 @@ int main()
     int a;
     float b;
     char c=-32;
-    bool d=1;
+    bool d=true;
     cout << "Введите целое число" << endl;
     cin >> a;
     cout << "Введите число c плавающей запятой" << endl;
