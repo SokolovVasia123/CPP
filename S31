@@ -1,1 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+setlocale(0,"Rus");
+cout << "Создайте текстовый массив с названиями цифр от 0 до 9. Пользователь вводит число и получает на экран его название." <<endl;
+int num;
+string str[] {"ноль","один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
+cout << "Введите число: ";
+cin >> num;
+if (num < sizeof(str)/sizeof(str[0])) cout << "Это цифра-" << str[num] << "." << endl;
+else if (num >= sizeof(str)/sizeof(str[0])) cout << "Принимаются только цифры в диапазоне от 0 до 9" << endl;
+return 0;
+}
 
