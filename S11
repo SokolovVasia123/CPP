@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+setlocale(0, "Rus");
+cout << "Циклически перебрать числа от a до b. Если число делится на 3 вывести его на экран:" << endl;
+int a, b;
+cout << "Введите 2 числа:" << endl;
+cin >> a;
+cin >> b;
+cout << endl;
+for(int i=0; a+i<b+1; i++) {
+    if (((a+i)%3)==0){
+        cout << a+i << endl;
+    }
+}
+return 0;
+}
