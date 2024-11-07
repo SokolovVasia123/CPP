@@ -1,0 +1,46 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+class Bucket {
+public:
+Bucket(double v) : volume(v), used(0) {}
+// Метод для опустошения ведра
+void flush() {
+used = 0;
+cout << "Ведро опустошено. Теперь доступный объем: " << volume << " литров." << endl;
+}
+// Метод для наполнения ведра
+double fill(double v) {
+double available_space = volume - used;  //находим доступное место в ведре
+if (v <= available_space) {
+    used += v;  // если места достаточно, то заполняем ведро
+    cout << "Ведро заполнено на " << v << " литров. Теперь налито: " << used << " литров." << endl;
+    return 0;
+    }
+else {
+    used += available_space;  // заполняем ведро насколько возможно
+    double difference = v - available_space;  // находим разницу
+    cout << "Ведро заполнено на " << available_space << " литров. Осталось не залитыми в ведро " << difference << " литра." << endl;
+    return difference;  // возвращаем количество недостающей жидкости
+    }
+}
+private:
+double volume;  // общий объем ведра
+double used;    // количество уже налитой жидкости
+};
+
+int main() {
+setlocale (0, "Russian");
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+cout << "Написать класс ведра Bucket. свойства: volume (объем в литрах) и used (сколько литров уже налито) методы:" << endl;
+cout << "flush() (опустошить. весь объем становится доступным для использования) и fill(v) (наполнить v литрами жидкости)." << endl;
+cout << "При вызове метода fill() выполняется проверка - достаточно ли в ведре незанятого объема." << endl;
+cout << "Если достаточно - метод заполняет ведро (меняет свойство used) и возвращает 0. Если недостаточно - ведро заполняется настолько, насколько возможно и возвращается разница (тот объем, который не поместился)" << endl;
+Bucket bucket(12);  // создаем ведро на 12 литров
+bucket.fill(6);     // заполняем на 6 литров
+bucket.fill(9);     // пробуем залить 9 литров
+bucket.flush();     // опустошаем ведро
+
+return 0;
+}
