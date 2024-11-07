@@ -10,8 +10,7 @@ for (int i = num; i != -1; --i)
 cout << ch[i];
 }
 }
-int main()
-{
+int main() {
 setlocale (0, "Russian");
 SetConsoleCP(1251);
 SetConsoleOutputCP(1251);
