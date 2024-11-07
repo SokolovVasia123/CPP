@@ -2,11 +2,9 @@
 #include <Windows.h>
 #include <cstring>
 using namespace std;
-void revers (char ch[])
-{
+void revers (char ch[]) {
 int num = strlen(ch);
-for (int i = num; i != -1; --i)
-{
+for (int i = num; i != -1; --i) {
 cout << ch[i];
 }
 }
