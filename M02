@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+float square (float A, int N) {
+    float const PI = 3.1415926535;
+    float grad = 1/tan(180/N * PI/180);  //Перевод ctg из радианов в грудусы, котангенс не прописан, пришлось думать
+    float S = (N*(A*A)/4) * grad;
+    return S;
+}
+int main() {
+    float storona;
+    int kolichestvo;
+    setlocale(0, "Russian");
+    cout << "Функция get_square(A, N) принимает два параметра: сторона А и число сторон N, и должна вернуть площадь N-угольника со стороной А." << endl;
+    cout << "Введите длину стороны: ";
+    cin >> storona;
+    cout << endl << "Введите число сторон: ";
+    cin >> kolichestvo;
+    cout << square(storona,kolichestvo) << endl;
+    return 0;
+}
