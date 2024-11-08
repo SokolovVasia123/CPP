@@ -1,1 +1,36 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+// Для решения нужен вложенный цикл или цикл в цикле. Во внещнем цикле, мы берём 0 элемент массива,
+//а с помощью внутреннего цикла, сравниваем его с последующим.
+void sortt(int arr[], int Size = 11) {
+    int save1;
+    for (int i = 0; i < Size; i++) {
+        for(int j = 0; j < Size-1; j++ ) {
+            if(arr[j] < arr[j+1]) {
+                save1 = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = save1;
+            }
+        }
+    }
+        for (int i = 0; i < Size; i++)
+            cout << arr[i] << " ";
+}
+
+int main()
+{
+    setlocale(0, "Russian");
+    cout << "Напишите функцию sort(), которая принимает массив из 10 чисел и сортирует их по убыванию" << endl;
+    srand(time(NULL)); //тут можно регулировать диапазон самой функции
+    int SIZE = 10;
+    int arr[SIZE];
+
+    for (int i = 0; i <= SIZE; i++) {
+        arr[i] = rand() % 100; //тут можно регулировать диапазон выпадаемых значений массива
+        cout << arr[i] << endl;
+    }
+    sortt(arr);
+    return 0;
+}
 
