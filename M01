@@ -1,1 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale (0, "Russian");
+    cout << "Используя циклы выведите таблицу Пифагора. Она должна быть отформатирована (используйте символ табуляции)." << endl;
+    cout << endl;
+    cout << "\t"; // Отступ для 1 столбца
+    for (int i = 1; i <= 10; i++) {
+        cout << i << "\t"; // Вывод заголовков столбцов
+    }
+    cout << endl;
+    // Вывод строк таблицы
+    for (int i = 1; i <= 10; i++) {
+        cout << i << "\t"; // Вывод заголовка строки
+        for (int j = 1; j <= 10; j++) {
+            cout << (i * j) << "\t";
+        }
+        cout << endl;
+    }
+    return 0;
+}
 
