@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+float get_angle(float A, float B, float C) {
+    if (A <= 0 || B <= 0 || C<=0 ) {
+        cout << "Неверная постановка условий задачи" << endl;
+    }
+    else {
+        float const PI = 3.1415926535;
+        float gradus;
+        float COS = (B*B + C*C - A*A)/(2*A*B);
+        gradus = acos(COS) * 180/PI;
+        return gradus;
+    }
+}
+int main() {
+    setlocale(0, "Russian");
+    cout << "Функция get_angle() принимает три числа - длины трех сторон треугольника и возвращает значение угла (в градусах), расположенного напротив первой стороны. " <<endl;
+    cout << "Разрешено использовать обратные тригонометрические функции из библиотеки math.h." <<endl;
+    cout << "Введите проверку на корректность значений аргументов (>0)." <<endl;
+    float A, B, C;
+    cout << "Введите 3 стороны треугольника: " << endl;
+    cin >> A;
+    cin >> B;
+    cin >> C;
+    cout << get_angle(A,B,C) << endl;
+    return 0;
+}
