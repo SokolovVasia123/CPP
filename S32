@@ -3,22 +3,21 @@
 #include <Windows.h>
 using namespace std;
 
-int main()
-{
-setlocale (0, "Russian");
-SetConsoleCP(1251);
-SetConsoleOutputCP(1251);
-char lip;
-char *pointer;
-char input[1000];
-cout << "Пользователь вводит строку. Используя указатель на строку, сдвиньте каждую букву в строке на 1 (a > b, b>c …)" << endl;
-cout <<"(каждый символ задается числом) длину строки можно получить функцией strlen() из библиотеки cstring." << endl;
-cout << "Введите строку: ";
-cin >> input;
-pointer = input;
-for (int i=0; i < strlen(input); i++) {
-    lip= pointer[i] + 1;
-    cout << lip << endl;
-}
-return 0;
+int main() {
+    setlocale (0, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    char lip;
+    char *pointer;
+    char input[1000];
+    cout << "Пользователь вводит строку. Используя указатель на строку, сдвиньте каждую букву в строке на 1 (a > b, b>c …)" << endl;
+    cout <<"(каждый символ задается числом) длину строки можно получить функцией strlen() из библиотеки cstring." << endl;
+    cout << "Введите строку: ";
+    cin >> input;
+    pointer = input;
+    for (int i=0; i < strlen(input); i++) {
+        lip= pointer[i] + 1;
+        cout << lip << endl;
+    }
+    return 0;
 }
