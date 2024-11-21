@@ -3,19 +3,20 @@
 #include <cstring>
 using namespace std;
 void revers (char ch[]) {
-int num = strlen(ch);
-for (int i = num; i != -1; --i) {
-cout << ch[i];
+    int num = strlen(ch);
+    for (int i = num; i != -1; --i) {
+    cout << ch[i];
+    }
 }
-}
+
 int main() {
-setlocale (0, "Russian");
-SetConsoleCP(1251);
-SetConsoleOutputCP(1251);
-cout << "Напишите функцию reverse(), которая принимает строку и выводит ее на экран в отраженном виде. «Testing» → «gnitseT»" << endl;
-char ch[1];
-cout << "Введите строку: ";
-cin >> ch;
-revers(ch);
-return 0;
+    setlocale (0, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    cout << "Напишите функцию reverse(), которая принимает строку и выводит ее на экран в отраженном виде. «Testing» → «gnitseT»" << endl;
+    char ch[1];
+    cout << "Введите строку: ";
+    cin >> ch;
+    revers(ch);
+    return 0;
 }
