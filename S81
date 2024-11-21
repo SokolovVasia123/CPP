@@ -4,44 +4,44 @@
 using namespace std;
 class IDString {
 private:
-string value;
+    string value;
 public:
-IDString(const string& str) : value(str) {}
-// Переопределение оператора инкремента
-IDString& operator++() {
-for (char& c : value) {
-    ++c;  // Смещение символа на 1
-}
-return *this;
-}
-// Переопределение оператора декремента
-IDString& operator--() {
-for (char& c : value) {
-    --c;  // Смещение символа на -1
-}
-return *this;
-}
-// Метод для получения строкового представления
-string toString() const {
-return value;
-}
+    IDString(const string& str) : value(str) {}
+    // Переопределение оператора инкремента
+    IDString& operator++() {
+        for (char& c : value) {
+            ++c;  // Смещение символа на 1
+        }
+        return *this;
+    }
+    // Переопределение оператора декремента
+    IDString& operator--() {
+        for (char& c : value) {
+            --c;  // Смещение символа на -1
+        }
+    return *this;
+    }
+    // Метод для получения строкового представления
+    string toString() const {
+    return value;
+    }
 };
 
 int main() {
-setlocale (0, "Russian");
-SetConsoleCP(1251);
-SetConsoleOutputCP(1251);
-cout << "Перегрузите унарный оператор инкремента (++) для применения к текстовым строкам: его применение смещает все символы в строке на 1. Таким же образом перегрузите оператор декремента (--)"<< endl;
-string c;
-cin >> c;
-IDString str(c);
-cout << "Исходная строка: " << str.toString() << endl;
-// Инкремент
-++str;
-cout << "После инкремента: " << str.toString() << endl;
-// Декремент
---str;
---str;
-cout << "После декремента: " << str.toString() << endl;
-return 0;
+    setlocale (0, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    cout << "Перегрузите унарный оператор инкремента (++) для применения к текстовым строкам: его применение смещает все символы в строке на 1. Таким же образом перегрузите оператор декремента (--)"<< endl;
+    string c;
+    cin >> c;
+    IDString str(c);
+    cout << "Исходная строка: " << str.toString() << endl;
+    // Инкремент
+    ++str;
+    cout << "После инкремента: " << str.toString() << endl;
+    // Декремент
+    --str;
+    --str;
+    cout << "После декремента: " << str.toString() << endl;
+    return 0;
 }
