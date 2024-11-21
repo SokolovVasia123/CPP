@@ -11,6 +11,6 @@ int main()
     cin >> a;
     cin >> b;
     cout << "Частное от деления:" << a/b << endl;
-     cout << "Остаток от деления:" << a%b << endl;
+    cout << "Остаток от деления:" << a%b << endl;
     return 0;
 }
