@@ -3,26 +3,25 @@ using namespace std;
 
 // Первая перегрузка для int
 void print(int value) {
-cout << value << endl;
+    cout << value << endl;
 }
 // Вторая перегрузка для float
-void print(float value){
-cout << value << endl;
+void print(float value) {
+    cout << value << endl;
 }
 // Третья перегрузка для char
-void print(char value){
-cout << value << endl;
+void print(char value) {
+    cout << value << endl;
 }
 // Четвёртая перегрузка для int int
-void print(int value1, int value2){
-cout << value1 <<" "<< value2 << endl;
+void print(int value1, int value2) {
+    cout << value1 <<" "<< value2 << endl;
 }
 int main() {
-cout << "Напишите перегруженную функцию print(), которая выводит на отдельной строке значения, передаваемые ей через запятую. Функция может принимать: 1) int; (2) float; (3) char; (4) int и int; (Таким образом, фактически, нужно написать четыре функции)" << endl;
-print(5);           // int
-print(3.14f);      // float
-print('A');        // char
-print(1, 2);       // int int
-
+    cout << "Напишите перегруженную функцию print(), которая выводит на отдельной строке значения, передаваемые ей через запятую. Функция может принимать: 1) int; (2) float; (3) char; (4) int и int; (Таким образом, фактически, нужно написать четыре функции)" << endl;
+    print(5); // int
+    print(3.14f); // float
+    print('A'); // char
+    print(1, 2); // int int
     return 0;
 }
